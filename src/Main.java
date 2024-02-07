@@ -1,10 +1,12 @@
+import model.Contact;
 import model.GroceryList;
+import model.MobilePhone;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    /*    Scanner scanner = new Scanner(System.in);
         GroceryList groceryList = new GroceryList();
         int choice;
         do {
@@ -26,6 +28,14 @@ public class Main {
             groceryList.printSorted();
         } while (choice != 0);
         scanner.close();
+*/
+
+        MobilePhone mobilePhone = new MobilePhone("123456789");
+        Contact contact1 = Contact.createContact("Bob", "31415926");
+        Contact contact2 = Contact.createContact("Alice", "16180339");
+        mobilePhone.addNewContact(contact1);
+        mobilePhone.addNewContact(contact2);
+        mobilePhone.printContacts();
 
     }
 }
